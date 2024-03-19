@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: my-pod
+  name: my-pod1
 spec:
   containers:
   - name: nginx-container
@@ -10,20 +10,53 @@ spec:
     - name: my-volume
       mountPath: "/var/www/html"
   volumes:
-  - name: my-volume
+  - name: my-volume-1
     persistentVolumeClaim:
       claimName: my-pvc
-.....
+...
 
 spec:
   containers:
-  - name: my-container
+  - name: my-container1
     image: nginx
     volumeMounts:
     - name: my-volume
       mountPath: "/var/www/html"
   volumes:
-  - name: my-volume
+  - name: my-volume-1
+    configMap:
+      name: html-content
+      items:
+      - key: index.html
+        path: index.html
+...
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: my-pod2
+spec:
+  containers:
+  - name: nginx-container
+    image: nginx
+    volumeMounts:
+    - name: my-volume
+      mountPath: "/var/www/html"
+  volumes:
+  - name: my-volume-2
+    persistentVolumeClaim:
+      claimName: my-pvc
+...
+
+spec:
+  containers:
+  - name: my-container2
+    image: nginx
+    volumeMounts:
+    - name: my-volume
+      mountPath: "/var/www/html"
+  volumes:
+  - name: my-volume-2
     configMap:
       name: html-content
       items:
