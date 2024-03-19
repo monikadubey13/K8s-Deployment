@@ -28,5 +28,5 @@ spec:
       name: html-content
       items:
       - key: index.html
-        path: index.html
+        path: data.yaml/index.html
 
