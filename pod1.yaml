@@ -4,8 +4,8 @@ metadata:
   name: my-pod1
 spec:
   containers:
-  - name: nginx-container
-    image: nginx
+  - name: container1
+    image: httpd
     volumeMounts:
     - name: my-volume-1
       mountPath: "/var/www/html"
@@ -17,8 +17,8 @@ spec:
 
 spec:
   containers:
-  - name: my-container1
-    image: nginx
+  - name: container1
+    image: httpd
     volumeMounts:
     - name: my-volume
       mountPath: "/var/www/html"
