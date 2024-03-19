@@ -9,7 +9,7 @@ spec:
     - ReadWriteOnce
   persistentVolumeReclaimPolicy: Retain
   hostPath:
-    path: /data/my-pv
+    path: /mnt/data
 
 ---
 

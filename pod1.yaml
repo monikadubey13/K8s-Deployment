@@ -13,21 +13,5 @@ spec:
   - name: my-volume-1
     persistentVolumeClaim:
       claimName: my-pvc
-...
 
-spec:
-  containers:
-  - name: container1
-    image: httpd
-    volumeMounts:
-    - name: my-volume
-      mountPath: "/var/www/html"
-  volumes:
-  - name: my-volume-1
-    configMap:
-      name: html-content
-      items:
-      - key: index.html
-        path: index.html
-...
 
