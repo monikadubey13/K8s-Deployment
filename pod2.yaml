@@ -5,7 +5,7 @@ metadata:
 spec:
   containers:
   - name: container2
-    image: htppd
+    image: httpd
     volumeMounts:
     - name: my-volume-2
       mountPath: "/var/www/html"
@@ -28,5 +28,5 @@ spec:
       name: html-content
       items:
       - key: index.html
-        path: data.yaml/index.html
+        path: index.html
 
