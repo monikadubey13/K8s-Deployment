@@ -13,9 +13,7 @@ spec:
   - name: my-volume
     persistentVolumeClaim:
       claimName: my-pvc
-
-.......
-
+.....
 
 spec:
   containers:
