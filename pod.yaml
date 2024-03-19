@@ -7,7 +7,7 @@ spec:
   - name: nginx-container
     image: nginx
     volumeMounts:
-    - name: my-volume
+    - name: my-volume-1
       mountPath: "/var/www/html"
   volumes:
   - name: my-volume-1
@@ -53,7 +53,7 @@ spec:
   - name: my-container2
     image: nginx
     volumeMounts:
-    - name: my-volume
+    - name: my-volume-2
       mountPath: "/var/www/html"
   volumes:
   - name: my-volume-2
