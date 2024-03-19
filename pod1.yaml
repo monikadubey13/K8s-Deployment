@@ -28,6 +28,6 @@ spec:
       name: html-content
       items:
       - key: index.html
-        path: data.yaml/index.html
+        path: index.html
 ...
 

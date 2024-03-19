@@ -3,10 +3,4 @@ kind: ConfigMap
 metadata:
   name: html-content
 data:
-  index.html: |
-    <html>
-    <head><title>Welcome to my website</title></head>
-    <body>
-    <h1>Hello, Deployment works</h1>
-    </body>
-    </html>
+  name: index.html
