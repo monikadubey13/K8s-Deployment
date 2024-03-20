@@ -7,10 +7,10 @@ spec:
   - name: container2
     image: httpd:latest
     volumeMounts:
-    - name: my-volume-2
+    - name: my-volume
       mountPath: "/usr/local/apache2/htdocs/"
   volumes:
-  - name: my-volume-2
+  - name: my-volume
     persistentVolumeClaim:
       claimName: my-pvc
 
