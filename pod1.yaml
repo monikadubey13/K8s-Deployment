@@ -8,7 +8,7 @@ spec:
     image: httpd
     volumeMounts:
     - name: my-volume-1
-      mountPath: "/var/www/html"
+      mountPath: "/usr/local/apache2/htdocs"
   volumes:
   - name: my-volume-1
     persistentVolumeClaim:
